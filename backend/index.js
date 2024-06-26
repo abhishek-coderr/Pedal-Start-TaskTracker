@@ -4,7 +4,13 @@ const cors = require('cors')
 const tasks_Schema = require('./models/tasks_schema');
 const app = express();
 app.use(express.json());
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-1whq.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+))
 
 ConnecttoDB('mongodb+srv://abhishek1029sain:abhishek10@cluster0.lawks9g.mongodb.net/TaskTracker').then(async() => {
     console.log('DB connected');
