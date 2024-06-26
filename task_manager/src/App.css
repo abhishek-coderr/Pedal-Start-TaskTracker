@@ -1,0 +1,114 @@
+.tasks_container {
+  width: 80%; /* Adjusted width for responsiveness */
+  max-width: 800px; /* Set a max-width to prevent it from becoming too wide on large screens */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+header > h1 > i:hover {
+  color: rgba(0, 0, 0, 0.621);
+}
+
+.dots-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.add-task {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  cursor: pointer;
+}
+
+.add-task:hover {
+  background-color: rgba(128, 128, 128, 0.212);
+}
+
+.fas.fa-plus {
+  color: #3498db;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.task-list {
+  background-color: rgba(128, 128, 128, 0.169);
+  border-radius: 10px;
+  padding: 2%;
+  margin-bottom: 10px; /* Added margin-bottom to separate tasks */
+}
+
+.fa-trash {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.fa-trash:hover {
+  color: red;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tasks {
+  padding: 0 5%;
+}
+
+.tasks > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center align items vertically */
+}
+
+label {
+  cursor: pointer;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.task-checkbox:checked {
+  background-color: #3498db;
+}
+
+.task-checkbox:checked ~ label {
+  text-decoration: line-through;
+}
+
+.task-details {
+  align-items: center;
+  width: 70%; /* Adjusted width for task details */
+}
+
+.task-info {
+  flex-grow: 1; /* Allow task info to grow */
+  padding-left: 10px; /* Added padding to separate checkbox and task details */
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-actions i {
+  margin-left: 10px; /* Added margin to space out action icons */
+}
